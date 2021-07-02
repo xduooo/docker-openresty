@@ -19,7 +19,7 @@ docker run --detach \
   --name=openresty \
   --network=host \
   --restart always \
-  xduooo/openresty:1.17.8.2
+  xduooo/openresty:1.19.3.2
 ```
 
 or with Bridge
@@ -28,7 +28,7 @@ docker run --detach \
   --name=openresty \
   --publish 80:80 --publish 443:443 \
   --restart always \
-  xduooo/openresty:1.17.8.2
+  xduooo/openresty:1.19.3.2
 ```
 
 some settings that may be used
@@ -46,13 +46,13 @@ Building
 Normal:
 
 ```
-docker build -f buster/Dockerfile -t xduooo/openresty:1.17.8.2 .
+docker build -f buster/Dockerfile -t xduooo/openresty:1.19.3.2 .
 ```
 
 With ARGs:
 
 ```
-docker build -f buster/Dockerfile -t xduooo/openresty:1.17.8.2 --build-arg RESTY_DEB_FLAVOR="-debug" .
+docker build -f buster/Dockerfile -t xduooo/openresty:1.19.3.2 --build-arg RESTY_DEB_FLAVOR="-debug" .
 ```
 
 
@@ -64,7 +64,7 @@ Building (Debian Buster, DEB based)
 |RESTY_IMAGE_BASE  | "xduooo/debian" | The Debian Docker image base to build `FROM`. |
 |RESTY_IMAGE_TAG   | "buster-slim" | The Debian Docker image tag to build `FROM`. |
 |RESTY_DEB_FLAVOR  | "" | The `openresty` package flavor to use.  Possibly `"-debug"` or `"-valgrind"`. |
-|RESTY_DEB_VERSION | "=1.17.8.2-1~buster1" | The Debian package version to use, with `=` prepended. |
+|RESTY_DEB_VERSION | "=1.19.3.2-1~buster1" | The Debian package version to use, with `=` prepended. |
 
 
 Building (CentOS, RPM based)
@@ -76,7 +76,7 @@ Building (CentOS, RPM based)
 |RESTY_IMAGE_TAG | "8" | The CentOS Docker image tag to build `FROM`. |
 |RESTY_YUM_REPO | "https://openresty.org/package/centos/openresty.repo" | URL for the OpenResty YUM Repository. |
 |RESTY_RPM_FLAVOR | "" | The `openresty` package flavor to use.  Possibly `"-debug"` or `"-valgrind"`. |
-|RESTY_RPM_VERSION | "1.17.8.2-1" | The `openresty` package version to install. |
+|RESTY_RPM_VERSION | "1.19.3.2-1" | The `openresty` package version to install. |
 |RESTY_RPM_DIST | "el8" | The `openresty` package distribution to install. |
 |RESTY_RPM_ARCH | "x86_64" | The `openresty` package architecture to install. |
 
@@ -87,9 +87,9 @@ Building (Debian/Alpine, from source)
 | Key | Default | Description |
 :----- | :-----: |:----------- |
 |RESTY_IMAGE_BASE | "xduooo/debian" / "xduooo/alpine" | The Debian or Alpine Docker image base to build `FROM`. |
-|RESTY_IMAGE_TAG  | "buster-slim" / "3.12" | The Debian or Alpine Docker image tag to build `FROM`. |
-|RESTY_VERSION | 1.17.8.2 | The version of OpenResty to use. |
-|RESTY_OPENSSL_VERSION | 1.1.1g | The version of OpenSSL to use. |
+|RESTY_IMAGE_TAG  | "buster-slim" / "3.14" | The Debian or Alpine Docker image tag to build `FROM`. |
+|RESTY_VERSION | 1.19.3.2 | The version of OpenResty to use. |
+|RESTY_OPENSSL_VERSION | 1.1.1k | The version of OpenSSL to use. |
 |RESTY_OPENSSL_PATCH_VERSION | 1.1.1f | The version of OpenSSL to use when patching. |
 |RESTY_OPENSSL_URL_BASE | https://www.openssl.org/source | The base of the URL to download OpenSSL from. |
 |RESTY_PCRE_VERSION | 8.44 | The version of PCRE to use. |
@@ -139,7 +139,7 @@ Copyright & License
 
 `docker-openresty` is licensed under the 2-clause BSD license.
 
-Copyright (c) 2017-2020, Evan Wies <evan@neomantra.net>.
+Copyright (c) 2017-2021, Evan Wies <evan@neomantra.net>.
 
 This module is licensed under the terms of the BSD license.
 

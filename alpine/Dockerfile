@@ -2,7 +2,7 @@
 # https://github.com/openresty/docker-openresty
 
 ARG RESTY_IMAGE_BASE="xduooo/alpine"
-ARG RESTY_IMAGE_TAG="3.12"
+ARG RESTY_IMAGE_TAG="3.14"
 
 FROM ${RESTY_IMAGE_BASE}:${RESTY_IMAGE_TAG}
 
@@ -10,9 +10,9 @@ LABEL maintainer="xduooo <xduooo@gmail.com>"
 
 # Docker Build Arguments
 ARG RESTY_IMAGE_BASE="xduooo/alpine"
-ARG RESTY_IMAGE_TAG="3.12"
-ARG RESTY_VERSION="1.17.8.2"
-ARG RESTY_OPENSSL_VERSION="1.1.1g"
+ARG RESTY_IMAGE_TAG="3.14"
+ARG RESTY_VERSION="1.19.3.2"
+ARG RESTY_OPENSSL_VERSION="1.1.1k"
 ARG RESTY_OPENSSL_PATCH_VERSION="1.1.1f"
 ARG RESTY_OPENSSL_URL_BASE="https://www.openssl.org/source"
 ARG RESTY_PCRE_VERSION="8.44"
